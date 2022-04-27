@@ -1,5 +1,5 @@
 const express = require('express');
-var cors = require('cors');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -20,8 +20,13 @@ const users = [
     { id: 7, name: 'Keqing', email: 'fischl@gmail.com', phone: '0178888888' },
 ]
 
+/* app.get('/users', (req, res) => {
+    res.send(users);
+} */
+
+
+/* filter by search query parameter */
 app.get('/users', (req, res) => {
-    /* filter by search query parameter */
     if (req.query.name) {
         const search = req.query.name.toLowerCase();
         const matched = users.filter(user => user.name.toLowerCase().includes(search))

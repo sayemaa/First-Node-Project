@@ -1,4 +1,7 @@
 /* 
+    ----------------------
+      Basic Server Setup
+    ----------------------
 
     1. Create a folder (manually or mkdir)
     2. Open command line to that folder
@@ -18,4 +21,19 @@
     6. node index.js
     7. Check your browser for that port
 
+    ---------------------
+            GET
+    ---------------------
+    
+    1. cors, go to node cors -> resourses -> middleware
+    2. npm install cors
+    3. const cors = require('cors');
+    4. app.use(cors());
+
+    ---------------------
+           POST
+    ---------------------
+
+    1. app.use(express.json());
+    
 */
